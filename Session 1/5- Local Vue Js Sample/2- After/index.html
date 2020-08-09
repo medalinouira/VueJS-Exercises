@@ -1,0 +1,46 @@
+<!-- 
+    Mohamed Ali NOUIRA
+    http://www.mohamedalinouira.com
+    https://github.com/medalinouira
+    Copyright © Mohamed Ali NOUIRA. All rights reserved.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Local Vue JS Sample</title>
+
+    <meta name="author" content="Mohamed Ali NOUIRA">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h2 class="header">Local Vue JS Sample</h2>
+
+    <h2 id="title">
+        {{ title }}
+    </h2>
+
+    <h2 class="subtitle">
+        {{ subtitle }}
+    </h2>
+
+    <div id="footer">
+
+        <input type="text" placeholder="First Name" v-on:input="setCreatorFirstName">
+
+        <input type="text" placeholder="Last Name" v-on:input="setCreatorLastName">
+
+        <p>Created by {{creatorFirstName}} {{creatorLastName}}</p>
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="libs/vue.js"></script>
+</body>
+
+</html>

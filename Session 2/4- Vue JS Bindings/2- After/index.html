@@ -1,0 +1,65 @@
+<!--
+Mohamed Ali NOUIRA
+http://www.mohamedalinouira.com
+https://github.com/medalinouira
+ Copyright © Mohamed Ali NOUIRA. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Vue JS Bindings</title>
+
+    <meta name="author" content="Mohamed Ali NOUIRA">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h2 class="header">Vue JS Bindings</h2>
+
+    <div id="app">
+
+        <h1 v-once> {{ title }} </h1>
+
+        <h1> {{ getTitle() }}</h1>
+
+        <p v-html="description"> </p>
+
+        <button v-on:click="updateTitle">Update Title</button>
+
+        <p>Copyright <a v-bind:href="siteUrl"> Mohamed Ali NOUIRA </a></p>
+
+        <input type="text" placeholder="Titre" v-model="title">
+
+        <button v-on:click="showData">Show Data</button>
+
+        <hr>
+
+    </div>
+
+    <div id="userForm">
+
+        <p>{{ getActionName() }} l'utilisateur</p>
+
+        <input type="text" placeholder="First Name" v-model="firstName">
+
+        <br/>
+        <br/>
+
+        <input type="text" placeholder="Last Name" v-model="lastName">
+
+        <br/>
+        <br/>
+
+        <button v-on:click="submit">{{ getActionName() }}</button>
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

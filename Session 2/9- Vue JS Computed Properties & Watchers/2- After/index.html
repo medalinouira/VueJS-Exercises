@@ -1,0 +1,35 @@
+<!--
+Mohamed Ali NOUIRA
+http://www.mohamedalinouira.com
+https://github.com/medalinouira
+ Copyright © Mohamed Ali NOUIRA. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Vue JS Computed Properties & Watchers</title>
+
+    <meta name="author" content="Mohamed Ali NOUIRA">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h2 class="header">Vue JS Computed Properties & Watchers</h2>
+
+    <div id="app">
+        <button v-on:click="index++">Increment Index</button>
+        <button v-on:click="index--">Decrement Index</button>
+        <button v-on:click="meter++">Increment Meter</button>
+        <p>Index: {{ index }} | {{ indexStatus }}</p>
+        <p>Meter: {{ meter }} | {{ meterStatus() }} </p>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

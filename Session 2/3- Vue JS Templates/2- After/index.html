@@ -1,0 +1,63 @@
+<!--
+Mohamed Ali NOUIRA
+http://www.mohamedalinouira.com
+https://github.com/medalinouira
+ Copyright © Mohamed Ali NOUIRA. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Vue JS Templates</title>
+
+    <meta name="author" content="Mohamed Ali NOUIRA">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h2 class="header">Vue JS Templates</h2>
+
+    <div id="vueJsHTML">
+
+        <h2 :style="{color: productStatusColor}"> {{ productName }} </h2>
+
+        <input type="text" v-model="availableProductsCount">
+
+        <hr>
+
+        <h2 :style="computedProductStatusStyle"> {{ productName }} </h2>
+
+        <h2 :class="computedProductStatusClass"> {{ productName }} </h2>
+
+        <input type="text" v-on:input="updateItemsCount">
+
+        <input type="text" v-model="itemsCount">
+
+        <hr>
+
+        <input type="text" placeholder="email" v-model="customer.email">
+
+        <input type="text" placeholder="Full Name" v-model="customer.fullName">
+
+        <input type="number" placeholder="Phone number" v-model="customer.phoneNumber">
+
+        <button v-on:click="showCustomerInformation"> Log Customer Infos </button>
+
+    </div>
+
+    <hr>
+
+    <div id="vueJsEl"></div>
+
+    <hr>
+
+    <div id="vueJsMount"></div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

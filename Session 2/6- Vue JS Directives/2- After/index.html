@@ -1,0 +1,91 @@
+<!--
+Mohamed Ali NOUIRA
+http://www.mohamedalinouira.com
+https://github.com/medalinouira
+ Copyright © Mohamed Ali NOUIRA. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Vue JS Directives</title>
+
+    <meta name="author" content="Mohamed Ali NOUIRA">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h2 class="header">{{ title }}</h2>
+
+        <h1 v-text="'Built-in Directives'"></h1>
+
+        <!-- v-if / v-else -->
+        <h2>v-if / v-else</h2>
+
+        <template v-if="isTitleInclude">
+    
+          <p> {{ title }} </p>
+    
+          <p> {{ description }} </p>
+    
+        </template>
+
+        <p v-else> App title is not included</p>
+
+        <button v-on:click="updateTitleInclusion">Update Title Inclusion</button>
+
+        <br>
+
+        <hr>
+
+        <!-- v-show -->
+        <h2>v-show</h2>
+
+        <template>
+    
+          <p v-show="isTitleVisible"> {{ title }} </p>
+    
+          <p v-show="isTitleVisible"> {{ description }} </p>
+    
+        </template>
+
+        <p v-show="!isTitleVisible"> App title is hidden</p>
+
+        <button v-on:click="updateTitleVisibility">Update Title Visibility</button>
+
+        <hr>
+
+        <!-- v-for -->
+        <h2>v-for</h2>
+
+        <ul>
+            <li v-for="product in products" :key="product.Id">
+                <p>{{ product.Name }}.</p>
+                <p>{{ product.Price }} {{ product.Unit }}.</p>
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="product in products" :key="product.Id" style="padding: 10px; background-color: gray">
+
+                <div v-if="product.itemsCount" v-for="(value, key, index) in product">
+                    <p>{{ index }} - {{ key }} : {{ value }}</p>
+                    <hr>
+                </div>
+
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

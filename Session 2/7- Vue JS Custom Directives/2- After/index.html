@@ -1,0 +1,115 @@
+<!--
+Mohamed Ali NOUIRA
+http://www.mohamedalinouira.com
+https://github.com/medalinouira
+ Copyright © Mohamed Ali NOUIRA. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Vue JS Custom Directives</title>
+
+    <meta name="author" content="Mohamed Ali NOUIRA">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h2 class="header">Vue JS Custom Directives</h2>
+
+        <hr style="border: 10px dotted indianred;">
+
+        <h1 v-text="'Global Custom Directives'"></h1>
+
+        <h2 v-text="'Without Arguments / Values Directive'"></h2>
+        <p v-text="'v-gray'" v-gray></p>
+
+        <hr>
+
+        <h2 v-text="'Without Arguments / With Values Directive'"></h2>
+        <p v-text="'v-backgroundcolor'" v-backgroundcolor="'purple'"></p>
+
+        <hr>
+
+        <h2 v-text="'With Arguments Directive'"></h2>
+
+        <p v-text="'v-mystyle:color'" v-mystyle:color="'darkcyan'"></p>
+
+        <p v-text="'v-mystyle:backgroundColor'" v-mystyle:backgroundcolor="'darkcyan'"></p>
+
+        <h2 v-text="'With Modifiers Directives'"></h2>
+
+        <p v-text="'v-myconfigurablestyle:backgroundcolor.opacity.border'" v-myconfigurablestyle:backgroundcolor.opacity.border="'darkcyan'"></p>
+
+        <p v-text="'v-myconfigurablestyle:backgroundcolor.opacity'" v-myconfigurablestyle:backgroundcolor.opacity="'darkcyan'"></p>
+
+        <p v-text="'v-myconfigurablestyle:backgroundcolor'" v-myconfigurablestyle:backgroundcolor="'darkcyan'"></p>
+
+        <hr style="border: 10px dotted indianred;">
+
+        <h2 v-text="'Real Samples'"></h2>
+
+        <p v-text="'v-showv2=true'" v-showv2="'true'"></p>
+
+        <p v-text="'v-showv2=false'" v-showv2="'false'"></p>
+
+        <hr>
+
+        <h1 v-text="'Real Samples'"></h1>
+
+        <h2 v-text="'v-count'"></h2>
+
+        <ul>
+            <li v-for="product in products" :key="product.Id" v-count="product.itemsCount">
+                <p>{{ product.Name }}.</p>
+                <p>{{ product.Price }} {{ product.Unit }}.</p>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2 v-text="'v-haspermissions'"></h2>
+
+        <div>
+            <ul>
+                <li v-for="product in products" :key="product.Id" v-count="product.itemsCount">
+                    <p>{{ product.Name }}.</p>
+                    <p>{{ product.Price }} {{ product.Unit }}.</p>
+                    <button v-haspermissions="'update_product'">Update</button>
+                    <button v-haspermissions="'delete_product'">Delete</button>
+                </li>
+            </ul>
+            <button v-haspermissions="'create_product'">Create</button>
+        </div>
+
+        <!--Error message will be displayed-->
+        <!--<p v-text="'directiveappshow=true'" v-directiveappshow="'false'"></p>-->
+
+    </div>
+
+    <hr>
+
+    <!--Directive App VueJS Instance-->
+    <div id="directiveapp">
+
+        <h2 v-text="'Local Directive Sample'"></h2>
+
+        <p v-text="'directiveappshow=true'" v-directiveappshow="'true'"></p>
+
+        <p v-text="'directiveappshow'" v-directiveappshow="'false'"></p>
+
+        <p v-text="'v-showv2=true'" v-showv2="'true'"></p>
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

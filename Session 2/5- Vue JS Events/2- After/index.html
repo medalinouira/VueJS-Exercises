@@ -1,0 +1,42 @@
+<!--
+Mohamed Ali NOUIRA
+http://www.mohamedalinouira.com
+https://github.com/medalinouira
+ Copyright © Mohamed Ali NOUIRA. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Vue JS Events</title>
+
+    <meta name="author" content="Mohamed Ali NOUIRA">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <h2 class="header" v-once>{{ title }}</h2>
+
+        <p>Click counts = {{ counts }}</p>
+
+        <button v-on:click="incrementClicks">Increment</button>
+
+        <button v-on:click="incrementClicksByStep(3, $event)">Increment By Step</button>
+
+        <p v-on:mousemove="mouseMoved">
+            Move your mouse
+            <p v-on:mousemove.stop>Block Event</p>
+        </p>
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
